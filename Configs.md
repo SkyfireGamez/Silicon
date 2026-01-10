@@ -18,7 +18,7 @@ Dont really touch these untill its perfect!!\
 **bUsePlaylistTab** - This Enbales the Expermental `Playlist` tab.\ 
 ALSO if you use so Comment out **static inline auto Playlist = L"";** at the top  so it works.
 
-**bAnim** - this is the STATE of reset builds animation (idc if u set to `false`) + this used by the reset build command the button so just check before you chnage it
+**bAnim** - this is the STATE of reset builds animation (idc if u set to `false`) + this used by the reset build command and the button so just check before you chnage it
 
 **bExploit** - Legal cheats lol (not even dont yet)\
 **bEAuth** - ALWAYS BE TRUE if exploits are on (auth systen to see the tab even if ur giving out the gs)\
@@ -164,4 +164,5 @@ case 2: // test1 tab - ducki67
 }
 ```
 
+more ig soon but there will be other shit to list
 
