@@ -31,7 +31,7 @@ ALSO if you use so Comment out **static inline auto Playlist = L"";** at the top
 This is like 50/50 if works for u
 
 **bUseCustomShit** - DONT ENABLE THIS SHIT IF U DONT KNOW WHAT YOU ARE DOING!!!! (ALSO Check FortGameMode.cpp before yout use this!!)\
-**CustomBusDef = L"/Game/Athena/Items/Cosmetics/BattleBuses/BBID_DefaultBus.BBID_DefaultBus";** - bus def
+**CustomBusDef = L"/Game/Athena/Items/Cosmetics/BattleBuses/BBID_DefaultBus.BBID_DefaultBus";** - bus def\
 **CustomSupplyDropDef = L"/Game/Athena/SupplyDrops/AthenaSupplyDrop.AthenaSupplyDrop_C";** - default supply drop maybe\
 Default: `/Game/Athena/SupplyDrops/AthenaSupplyDrop.AthenaSupplyDrop_C` or just dont use this custom feature
 
