@@ -1,5 +1,5 @@
 # Krypton
-A fork of erbium with Ducki7's adjustments and features
+A fork of erbium with Ducki67's adjustments and features
 
 About the configs just go [here](https://github.com/Ducki67/Krypton/blob/main/Configs.md)
 
