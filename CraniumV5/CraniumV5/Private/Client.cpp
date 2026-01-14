@@ -89,6 +89,9 @@ void ClientThread()
 			else if (!bPressed && GetAsyncKeyState(VK_F5))
 			{
 				std::cout << "damn yap!!!!!!!!!!!";
+				/*
+				CraniumV5 development boys :P
+				*/
 			}
 			/*else if (!bPressed && GetAsyncKeyState(VK_F2))
 			{
