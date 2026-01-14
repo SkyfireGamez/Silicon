@@ -32,7 +32,7 @@ struct FConfiguration
 
     static inline auto bLateGame = false;
     static inline auto bLGV2 = true; // a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
-    static inline auto bLGV3 =false // LATER / SOON
+    static inline auto bLGV3 = false; // LATER / SOON
     static inline auto LateGameZone = 4; // starting zone
     static inline auto bLateGameLongZone = false; // zone doesnt close for a long time
 
@@ -63,7 +63,7 @@ struct FConfiguration
 
     /// DONT CHANGE THESE SHITS
     static inline auto bUsePlaylistTab = false; 
-    static inline auto bShowExtraTabs = false;
+    static inline auto bShowExtraTabs = true;
 
     static inline bool bAnim = true;  // gui stuff dont change it plz
     static inline bool bEnablePlaylistTab = true; // not added yet

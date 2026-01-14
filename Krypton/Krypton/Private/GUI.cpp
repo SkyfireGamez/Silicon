@@ -322,7 +322,34 @@ void GUI::Init()
                 }
             };
 
+            if (FConfiguration::bShowExtraTabs)
+            {
 
+                if (ImGui::BeginTabItem("Extra1"))
+                {
+                    SelectedUI = 11;
+                    ImGui::EndTabItem();
+                }
+
+                if (ImGui::BeginTabItem("Extra1"))
+                {
+                    SelectedUI = 12;
+                    ImGui::EndTabItem();
+                }
+
+                if (ImGui::BeginTabItem("Extra2"))
+                {
+                    SelectedUI = 13;
+                    ImGui::EndTabItem();
+                }
+
+                if (ImGui::BeginTabItem("Extra3"))
+                {
+                    SelectedUI = 14;
+                    ImGui::EndTabItem();
+                }
+
+            };
 
             ImGui::EndTabBar();
         }
@@ -878,6 +905,30 @@ void GUI::Init()
                 Events::StartEvent();
         }
         break;
+
+
+        case 11:
+        {
+            ImGui::Text("Extra Tab!");
+        }
+        break;
+        case 12:
+        {
+            ImGui::Text("Extra Tab!");
+        }
+        break;
+        case 13:
+        {
+            ImGui::Text("Extra Tab!");
+        }
+        break;
+        case 14:
+        {
+            ImGui::Text("Extra Tab!");
+        }
+
+        break;
+
         }
 
         ImGui::End();
