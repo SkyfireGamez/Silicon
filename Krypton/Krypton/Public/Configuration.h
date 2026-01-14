@@ -63,7 +63,7 @@ struct FConfiguration
 
     /// DONT CHANGE THESE SHITS
     static inline auto bUsePlaylistTab = false; 
-    static inline auto bShowExtraTabs = true;
+    static inline auto bShowExtraTabs = false; // oops might not work
 
     static inline bool bAnim = true;  // gui stuff dont change it plz
     static inline bool bEnablePlaylistTab = true; // not added yet

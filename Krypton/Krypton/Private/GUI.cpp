@@ -907,27 +907,29 @@ void GUI::Init()
         break;
 
 
-        case 11:
+        /*case 11:
         {
             ImGui::Text("Extra Tab!");
         }
         break;
+
         case 12:
         {
             ImGui::Text("Extra Tab!");
         }
         break;
+
         case 13:
         {
             ImGui::Text("Extra Tab!");
         }
         break;
+
         case 14:
         {
             ImGui::Text("Extra Tab!");
         }
-
-        break;
+        break;*/
 
         }
 

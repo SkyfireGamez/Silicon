@@ -86,7 +86,10 @@ void ClientThread()
 
 				bDisablePreEdits ^= 1;
 			}
-
+			else if (!bPressed && GetAsyncKeyState(VK_F5))
+			{
+				std::cout << "damn yap!!!!!!!!!!!";
+			}
 			/*else if (!bPressed && GetAsyncKeyState(VK_F2))
 			{
 				bPressed = true;
