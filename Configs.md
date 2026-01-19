@@ -15,6 +15,11 @@ This can also be changed in teh GUI on the `LateGame` tab IN-GAME / IN REAL TIME
 ***GUI Configs***\
 Dont really touch these untill its perfect!!\
 
+# ---
+
+# Configs (CraniumV5)
+later ig
+
 **bUsePlaylistTab** - This Enbales the Expermental `Playlist` tab.\ 
 ALSO if you use so Comment out **static inline auto Playlist = L"";** at the top  so it works.
 
