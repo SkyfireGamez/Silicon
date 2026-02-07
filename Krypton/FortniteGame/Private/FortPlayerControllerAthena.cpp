@@ -1573,9 +1573,9 @@ void AFortPlayerControllerAthena::ServerCheat(UObject* Context, FFrame& Stack)
 	{
 	_help:
 		PlayerController->ClientMessage(FString(LR"(Command List:
-cheat dump1
-cheat dump2
-cheat fortmme
+cheat dump1 - Items Dump
+cheat dump2 - Playlist Dump
+cheat fortmme - Fix Mantle
 
     cheat startaircraft - Starts the battle bus
     cheat resumesafezone - Resumes the storm
@@ -1627,7 +1627,7 @@ cheat fortmme
 			}
 		}
 
-		/*  Give arena points command*/
+		/*Give arena points command*/
 
 		else if (command == "fortmme")
 		{
