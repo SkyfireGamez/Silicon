@@ -208,7 +208,7 @@ struct FBuildingClassData
 {
 public:
     USCRIPTSTRUCT_COMMON_MEMBERS(FBuildingClassData);
-
+    
     TSubclassOf<AActor> BuildingClass;
     int PreviousBuildingLevel;
     int UpgradeLevel;

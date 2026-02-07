@@ -196,7 +196,7 @@ void Client::Init()
 				{
 					auto Name = Object->Name.ToString();
 					if (Name.contains("Showdown"), ("Playlist_PlaygroundV2"))
-						Playlist->UIExtensions = Name.contains("ShowdownAlt"), ("Playlist_PlaygroundV2") ? ArenaExtensions : ShowdownExtensions;
+						Playlist->UIExtensions = Name.contains("ShowdownAlt") ? ArenaExtensions : ShowdownExtensions;
 				}
 			}
 		}

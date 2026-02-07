@@ -1626,6 +1626,9 @@ cheat fortmme
 				PlayerController->ClientMessage(FString(L"Started the aircraft!"), FName(), 1.f);
 			}
 		}
+
+		/*  Give arena points command*/
+
 		else if (command == "fortmme")
 		{
 			/*UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"Fort.MME.TacticalSprint 0"), nullptr);
