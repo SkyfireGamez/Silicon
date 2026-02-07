@@ -41,6 +41,10 @@ struct FConfiguration
     static inline auto bInfiniteMats = true;
     static inline auto bInfiniteAmmo = true;
     static inline auto bForceRespawns = true; // build your client with this too!
+    static inline int RespawnHightClient = 20000; // respawn hight value (Client.cpp Line: 173) (FortGamemode.cpp Line: 74)
+    static inline int RespawnTimeClient = 3; // respawnt time for clients as value (Client.cpp Line: 179) (FortGamemode.cpp Line: 80)
+
+
     static inline auto bJoinInProgress = false;
     static inline auto bKeepInventory = false;
 

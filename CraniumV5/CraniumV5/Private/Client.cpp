@@ -170,13 +170,13 @@ void Client::Init()
 					{
 						Playlist->RespawnHeight.Curve.CurveTable = nullptr;
 						Playlist->RespawnHeight.Curve.RowName = FName();
-						Playlist->RespawnHeight.Value = 20000;
+						Playlist->RespawnHeight.Value = FConfiguration::RespawnHightClient;
 					}
 					if (Playlist->HasRespawnTime())
 					{
 						Playlist->RespawnTime.Curve.CurveTable = nullptr;
 						Playlist->RespawnTime.Curve.RowName = FName();
-						Playlist->RespawnTime.Value = 3;
+						Playlist->RespawnTime.Value = FConfiguration::RespawnTimeClient;
 					}
 					Playlist->RespawnType = 1; // InfiniteRespawns
 					if (Playlist->HasbAllowJoinInProgress())
