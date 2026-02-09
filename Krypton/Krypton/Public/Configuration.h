@@ -9,9 +9,9 @@ struct FConfiguration
 {
     /// Playlist selectorV1
 
-    static inline auto Playlist = L"/Game/Athena/Playlists/Playlist_DefaultSolo.Playlist_DefaultSolo";
+    //static inline auto Playlist = L"/Game/Athena/Playlists/Playlist_DefaultSolo.Playlist_DefaultSolo";
     //static inline auto Playlist = L"/Game/Athena/Playlists/Creative/Playlist_PlaygroundV2.Playlist_PlaygroundV2";
-    //static inline auto Playlist = L"/Game/Athena/Playlists/Showdown/Playlist_ShowdownAlt_Solo.Playlist_ShowdownAlt_Solo";
+    static inline auto Playlist = L"/Game/Athena/Playlists/Showdown/Playlist_ShowdownAlt_Solo.Playlist_ShowdownAlt_Solo";
     //static inline auto Playlist = L"/Game/Athena/Playlists/Showdown/Playlist_Showdown_Solo.Playlist_Showdown_Solo";
 
 
@@ -53,6 +53,7 @@ struct FConfiguration
     static inline auto SiphonAmount = 50; // set to 0 to disable
     static inline auto bAutoRestart = false;
     static inline auto Port = 7777;
+    // static inline auto JoinIp = L"open 127.0.0.1"; // for webhooks
     static inline constexpr auto bEnableIris = true;
     static inline constexpr auto bGUI = true;
     static inline constexpr auto bCustomCrashReporter = true;
@@ -74,9 +75,9 @@ struct FConfiguration
     /*
     This will use ur radmin IP so those are in Erbium's dllmain.cpp AKA the whitelist
     */
-    static inline bool bExploit = false; // Legal cheats lol |  Nocom lol
-    static inline bool bEAuth = false; // ALWAYS BE TRUE if exploits are on
-    static inline bool bAuthed = false;  // Final auth result | DONT TOUCH THIS
+    //static inline bool bExploit = false; // Legal cheats lol |  Nocom lol
+    //static inline bool bEAuth = false; // ALWAYS BE TRUE if exploits are on
+    //static inline bool bAuthed = false;  // Final auth result | DONT TOUCH THIS
     
     // currentlz not finished  yet BUT tested on 1.11 it should work ig
     static inline auto bUseCustomShit = false; // DONT ENABLE THIS SHIT IF U DONT KNOW WHAT YOU ARE DOING!!!! (ALSO Check FortGameMode.cpp before yout use this!!)

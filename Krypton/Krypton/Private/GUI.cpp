@@ -309,7 +309,7 @@ void GUI::Init()
                 }
 
             };
-
+            /*
             if (FConfiguration::bExploit)
             {
                 if (FConfiguration::bAuthed)
@@ -321,7 +321,7 @@ void GUI::Init()
                     }
                 }
             };
-
+            */
             if (FConfiguration::bShowExtraTabs)
             {
 
@@ -402,7 +402,7 @@ void GUI::Init()
             }
 
             /// EXPLOITS
-            
+            /*
             if (FConfiguration::bExploit)
             {
 
@@ -460,7 +460,7 @@ void GUI::Init()
                     ImGui::Separator();
                 }
             }
-
+            */
             // EXPLOITS end
 
             ImGui::InputText("Console Command", commandBuffer, 1024);

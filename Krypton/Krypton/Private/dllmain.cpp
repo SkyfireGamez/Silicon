@@ -27,7 +27,7 @@
 ///#include <iostream>
 
 #pragma comment(lib, "iphlpapi.lib")
-
+/*
 // Checks typed IP against allowed list
 static std::vector<std::string> AllowedIPs = {
     "26.57.80.132", // ducki67
@@ -75,7 +75,7 @@ bool IsValidRadminIP(const std::string& typedIP)
 }
 
 
-
+*/
 
 
 void Main()
