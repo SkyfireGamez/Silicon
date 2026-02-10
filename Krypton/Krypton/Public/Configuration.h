@@ -32,8 +32,8 @@ struct FConfiguration
 
 
     static inline auto bLateGame = false;
-    static inline auto bLateGameVersionized = false; // a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
-    static inline auto bLateGameCustom = true; // LATER / SOON
+    static inline auto bLateGameVersionized = false; // (V2)  a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
+    static inline auto bLateGameCustom = false; // Custom LG loadout maker and settings for gui (BETA)
     static inline auto LateGameZone = 4; // starting zone
     static inline auto bLateGameLongZone = false; // zone doesnt close for a long time
 
