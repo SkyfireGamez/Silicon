@@ -877,8 +877,65 @@ void GUI::Init()
          {
              if (VersionInfo.FortniteVersion < 1.2  || VersionInfo.FortniteVersion > 2.5)
              {
-                 ImGui::Checkbox("V2 Lootpool", &FConfiguration::bLGV2);
+                 ImGui::Checkbox("Versionized Lootpool", &FConfiguration::bLateGameVersionized);
 			 }
+             // Customer 7000 | U7K
+             ImGui::Checkbox("Custom Late Game loadout  (Not fully done yet!!!)", &FConfiguration::bLateGameCustom);
+             if (FConfiguration::bLateGameCustom)
+             {
+
+                 FConfiguration::bLateGameVersionized = false;
+
+             // child box here
+                //ImGui::SetNextWindowContentSize(ImVec2(150, 300));
+                 ImGui::BeginChild("LGc", ImVec2(500, 200), true, ImGuiWindowFlags_HorizontalScrollbar);
+
+				 ImGui::Text("Item Slots:");
+
+                 // 1. Shotgun
+                 char bufShotgun[500];
+                 sprintf_s(bufShotgun, "%ls", FConfiguration::CustomShotgunItem);
+                 if (ImGui::InputText("Shotgun", bufShotgun, 500)) {
+                     swprintf_s(FConfiguration::CustomShotgunItem, L"%hs", bufShotgun);
+                 }
+
+                 // 2. Assault Rifle
+                 char bufAssault[500];
+                 sprintf_s(bufAssault, "%ls", FConfiguration::CustomAssaultRifleItem);
+                 if (ImGui::InputText("Assault Rifle", bufAssault, 500)) {
+                     swprintf_s(FConfiguration::CustomAssaultRifleItem, L"%hs", bufAssault);
+                 }
+
+                 // 3. Sniper
+                 char bufSniper[500];
+                 sprintf_s(bufSniper, "%ls", FConfiguration::CustomSniperItem);
+                 if (ImGui::InputText("Sniper", bufSniper, 500)) {
+                     swprintf_s(FConfiguration::CustomSniperItem, L"%hs", bufSniper);
+                 }
+
+                 // 4. Utility
+                 char bufUtil[500];
+                 sprintf_s(bufUtil, "%ls", FConfiguration::CustomUtilItem);
+                 if (ImGui::InputText("Utility", bufUtil, 500)) {
+                     swprintf_s(FConfiguration::CustomUtilItem, L"%hs", bufUtil);
+                 }
+
+
+
+                 //ImGui::SameLine();
+                 ImGui::Spacing();
+                 ImGui::Text("Item Count configs:");
+                 // need a slider for FCconfiguration::CustomUtilItemCount
+                 ImGui::SliderInt("Utility Item count", &FConfiguration::CustomUtilItemCount, 1, 99);
+
+
+                 // ammo
+
+
+
+                 ImGui::EndChild();
+             }
+
              ImGui::Text("Zone Phase settings:");
              ImGui::Spacing();
              ImGui::SliderInt("Zone phase", &FConfiguration::LateGameZone, 3, 7); // pahse 7 is playeble ig
@@ -897,6 +954,7 @@ void GUI::Init()
              ImGui::Text("Quick Notes:");
              ImGui::BulletText("LG Zone Phase: Phases can be 3 - 7 !!!");
              ImGui::BulletText("Long Zone: A zone doesnt close for a long time.");
+             ImGui::BulletText("Custom loadout: This option makes only 1 Loadout for everyone in the game. You can add your own WID's to it.");
          }
          break;
         case 10:

@@ -9,9 +9,10 @@ struct FConfiguration
 {
     /// Playlist selectorV1
 
-    //static inline auto Playlist = L"/Game/Athena/Playlists/Playlist_DefaultSolo.Playlist_DefaultSolo";
+    static inline auto Playlist = L"/Game/Athena/Playlists/Playlist_DefaultSolo.Playlist_DefaultSolo";
     //static inline auto Playlist = L"/Game/Athena/Playlists/Creative/Playlist_PlaygroundV2.Playlist_PlaygroundV2";
-    static inline auto Playlist = L"/Game/Athena/Playlists/Showdown/Playlist_ShowdownAlt_Solo.Playlist_ShowdownAlt_Solo";
+    //static inline auto Playlist = L"/Game/Athena/Playlists/Playground/Playlist_Playground.Playlist_Playground";
+    //static inline auto Playlist = L"/Game/Athena/Playlists/Showdown/Playlist_ShowdownAlt_Solo.Playlist_ShowdownAlt_Solo";
     //static inline auto Playlist = L"/Game/Athena/Playlists/Showdown/Playlist_Showdown_Solo.Playlist_Showdown_Solo";
 
 
@@ -31,8 +32,8 @@ struct FConfiguration
 
 
     static inline auto bLateGame = false;
-    static inline auto bLGV2 = true; // a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
-    static inline auto bLGV3 = false; // LATER / SOON
+    static inline auto bLateGameVersionized = false; // a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
+    static inline auto bLateGameCustom = true; // LATER / SOON
     static inline auto LateGameZone = 4; // starting zone
     static inline auto bLateGameLongZone = false; // zone doesnt close for a long time
 
@@ -64,12 +65,25 @@ struct FConfiguration
     static inline auto bMagicMethodCreative = true;  // magic cool fantastic ud creaative method Erbium 2025 -miko
 
 
-    /// DONT CHANGE THESE SHITS
+	/// DONT CHANGE THESE SHITS | Some stuff are GUI related so be careful when changing them
     static inline auto bUsePlaylistTab = false; 
     static inline auto bShowExtraTabs = false; // oops might not work
 
     static inline bool bAnim = true;  // gui stuff dont change it plz
     static inline bool bEnablePlaylistTab = true; // not added yet
+
+    static inline wchar_t CustomShotgunItem[500] = L"/Game/Athena/Items/Weapons/WID_Shotgun_Standard_Athena_SR_Ore_T03.WID_Shotgun_Standard_Athena_SR_Ore_T03";
+    static inline wchar_t CustomAssaultRifleItem[500] = L"/Game/Athena/Items/Weapons/WID_Assault_Heavy_Athena_SR_Ore_T03.WID_Assault_Heavy_Athena_SR_Ore_T03";
+    static inline wchar_t CustomSniperItem[500] = L"/Game/Athena/Items/Weapons/WID_Sniper_Heavy_Athena_SR_Ore_T03.WID_Sniper_Heavy_Athena_SR_Ore_T03";
+    static inline wchar_t CustomUtilItem[500] = L"/Game/Athena/Items/Consumables/ShockwaveGrenade/Athena_ShockGrenade.Athena_ShockGrenade";
+    static inline int CustomUtilItemCount = 1;
+    /*static inline wchar_t CustomSpecialAmmo1[500] = L""; // maybe il do it later
+    static inline int CustomAmmoCount1 = 1;
+    static inline wchar_t CustomSpecialAmmo2[500] = L"";
+    static inline int CustomAmmoCount2 = 1;
+    static inline wchar_t CustomSpecialAmmo3[500] = L"";
+    static inline int CustomAmmoCount3 = 1;*/
+
 
     /// == EXPLOITS TAB ==
     /*

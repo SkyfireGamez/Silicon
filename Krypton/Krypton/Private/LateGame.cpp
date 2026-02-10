@@ -27,7 +27,7 @@
 "V1" Late Game lootpool (Old, non-versionized) [Default Erbium Late Game lootpool]
 
 "V2" Late Game lootpool (Versionized) 
-[ Add this bool to Configuration,h as: "static inline auto bLGV2 = true"  ]
+[ Add this bool to Configuration,h as: "static inline auto bLateGameVersionized = true"  ]
 
 "V3" Late Game lootpool 
 (Future, tbd, will be the best of all time can be customized and shit)
@@ -42,7 +42,7 @@ NOTE: before u say all this is "AI" NO only the Playlist tab for experentall stu
 FLateGameItem LateGame::GetShotgun()
 {
     UEAllocatedVector<FLateGameItem> Shotguns;
-    if (FConfiguration::bLGV2)  // LG V2 (versionized guns and gameplay)
+    if (FConfiguration::bLateGameVersionized)  // LG V2 (versionized guns and gameplay)
     {
         // CH1
         if (VersionInfo.FortniteVersion >= 1.2 && VersionInfo.FortniteVersion <= 4.5)
@@ -183,7 +183,7 @@ FLateGameItem LateGame::GetShotgun()
         }
     };
     // LG V1
-    if (!FConfiguration::bLGV2)
+    if (!FConfiguration::bLateGameVersionized)
     {
         Shotguns =
         {
@@ -196,9 +196,13 @@ FLateGameItem LateGame::GetShotgun()
     V3 MAYBE HERE
     ============
     */
-    if (FConfiguration::bLGV3)
+    if (FConfiguration::bLateGameCustom)
     {
         /* soon */
+        Shotguns =
+        {
+            FLateGameItem(1, FindObject<UFortItemDefinition>(FConfiguration::CustomShotgunItem)),
+        };
     }
 
 
@@ -212,7 +216,7 @@ FLateGameItem LateGame::GetShotgun()
 FLateGameItem LateGame::GetAssaultRifle()
 {
     UEAllocatedVector<FLateGameItem> AssaultRifles;
-    if (FConfiguration::bLGV2)  // LG V2 (versionized guns and gameplay)
+    if (FConfiguration::bLateGameVersionized)  // LG V2 (versionized guns and gameplay)
     {
 
         // CH1
@@ -392,7 +396,7 @@ FLateGameItem LateGame::GetAssaultRifle()
         }
     };
     // LG V1
-    if (!FConfiguration::bLGV2)
+    if (!FConfiguration::bLateGameVersionized)
     {
         AssaultRifles =
         {
@@ -405,9 +409,14 @@ FLateGameItem LateGame::GetAssaultRifle()
     V3 MAYBE HERE
     ============
     */
-    if (FConfiguration::bLGV3)
+    if (FConfiguration::bLateGameCustom)
     {
         /* soon */
+        AssaultRifles =
+        {
+            FLateGameItem(1, FindObject<UFortItemDefinition>(FConfiguration::CustomAssaultRifleItem)),
+        };
+
     }
 
     std::cout << "LATEGAME >> (AssaultRifles)\n";
@@ -419,7 +428,7 @@ FLateGameItem LateGame::GetAssaultRifle()
 FLateGameItem LateGame::GetSniper()
 {
     UEAllocatedVector<FLateGameItem> Snipers;
-    if (FConfiguration::bLGV2)  // LG V2 (versionized guns and gameplay)
+    if (FConfiguration::bLateGameVersionized)  // LG V2 (versionized guns and gameplay)
     {
 
         // CH1
@@ -576,7 +585,7 @@ FLateGameItem LateGame::GetSniper()
         }
     };
     // LG V1
-    if (!FConfiguration::bLGV2)
+    if (!FConfiguration::bLateGameVersionized)
     {
         Snipers=
         {
@@ -590,9 +599,15 @@ FLateGameItem LateGame::GetSniper()
     V3 MAYBE HERE
     ============
     */
-    if (FConfiguration::bLGV3)
+    if (FConfiguration::bLateGameCustom)
     {
         /* soon */
+        Snipers =
+        {
+            FLateGameItem(1, FindObject<UFortItemDefinition>(FConfiguration::CustomSniperItem)), 
+            FLateGameItem(FConfiguration::CustomUtilItemCount, FindObject<UFortItemDefinition>(FConfiguration::CustomUtilItem)),
+
+        };
     }
 
     std::cout << "LATEGAME >> (Snipers/Utils)\n";
