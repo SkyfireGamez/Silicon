@@ -384,11 +384,11 @@ void GUI::Init()
             }
 
 
-
+            
             if (gsStatus <= Joinable)
                 ImGui::Checkbox("Lategame", &FConfiguration::bLateGame);
 
-            if (gsStatus == Joinable && ImGui::Button("Start Bus Early"))
+            if (gsStatus == Joinable && ImGui::Button("   Start Bus Early   "))
             {
                 if (UFortGameStateComponent_BattleRoyaleGamePhaseLogic::GetDefaultObj())
                 {
@@ -400,7 +400,7 @@ void GUI::Init()
                 else
                     UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(L"startaircraft"), nullptr);
             }
-
+            
             /// EXPLOITS
             /*
             if (FConfiguration::bExploit)
@@ -462,6 +462,10 @@ void GUI::Init()
             }
             */
             // EXPLOITS end
+            
+
+
+            ImGui::Spacing();
 
             ImGui::InputText("Console Command", commandBuffer, 1024);
 
@@ -472,6 +476,7 @@ void GUI::Init()
 
                 UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), FString(wstr.c_str()), nullptr);
             }
+			ImGui::Checkbox("Auto Restart (EARLY BETA)", &FConfiguration::bAutoRestart);
             break;
         case 1:
             if (ImGui::Button("Pause Safe Zone"))
@@ -593,26 +598,37 @@ void GUI::Init()
 
         case 3:
         {
+			// Child box for server settings
+            ImGui::Text("MISC OPTIONS:");
+			ImGui::BeginChild("ServerSettings", ImVec2(0, 400), true, ImGuiWindowFlags_AlwaysVerticalScrollbar);
+
+			ImGui::Text("Server Settings:");
+            ImGui::SliderInt("Tick Rate:", &FConfiguration::MaxTickRate, 30, 120);
+            ImGui::Checkbox("Allow CheatManager Clients", &FConfiguration::bEnableCheats);
+
+			ImGui::Spacing();
+            ImGui::Text("Game Rules:");
             ImGui::Checkbox("Infinite Materials", &FConfiguration::bInfiniteMats);
             ImGui::Checkbox("Infinite Ammo", &FConfiguration::bInfiniteAmmo);
             ImGui::Checkbox("Keep Inventory", &FConfiguration::bKeepInventory);
-
+			ImGui::Checkbox("Join Progess (BETA)", &FConfiguration::bJoinInProgress);
             ImGui::SliderInt("Siphon Amount:", &FConfiguration::SiphonAmount, 0, 200);
-            ImGui::SliderInt("Tick Rate:", &FConfiguration::MaxTickRate, 30, 120);
 
+            
+            ImGui::Checkbox("Allow ForceRespawn Clients", &FConfiguration::bForceRespawns);
+            if (FConfiguration::bForceRespawns)
+            {
+                ImGui::SliderInt("RespawnHightClient (Client dlls) \n(Client.cpp Line: 173)", &FConfiguration::RespawnHightClient, 1000, 65000);
+                ImGui::SliderInt("RespawnTimeClient (Client dlls) \n(Client.cpp Line: 179)", &FConfiguration::RespawnTimeClient, 3, 25);
 
-            bool bAutoReset = false;
-            float AutoResetMinutes = 5.f;
-            double LastResetTime = 0.0;
+                ImGui::SliderInt("RespawnHightGamemode (GS dlls) \n(FortGamemode.cpp Line: 74)", &FConfiguration::RespawnHightGamemode, 1000, 65000);
+                ImGui::SliderInt("RespawnTimeGamemode (GS dlls) \n(FortGamemode.cpp Line: 80)", &FConfiguration::RespawnTimeGamemode, 3, 25);
 
+			}
+            ImGui::EndChild();
 
             ImGui::Checkbox("Reset Builds Anim (Dont use thise for now skidda)", &FConfiguration::bAnim);
-            ImGui::Checkbox("Auto Reset Builds", &bAutoReset);
 
-            if (bAutoReset)
-            {
-                ImGui::SliderFloat("Auto Reset Minutes", &AutoResetMinutes, 0.5f, 60.f, "%.1f");
-            }
 
             if (ImGui::Button("Reset Builds"))
             {
@@ -637,38 +653,17 @@ void GUI::Init()
                 }
 
                 Builds.Free();
-                LastResetTime = ImGui::GetTime();
             }
 
-            if (bAutoReset)
-            {
-                double CurrentTime = ImGui::GetTime();
-                double Interval = AutoResetMinutes * 60.0;
-
-                if (CurrentTime - LastResetTime >= Interval)
-                {
-                    TArray<ABuildingSMActor*> Builds;
-                    Utils::GetAll<ABuildingSMActor>(Builds);
-
-                    if (FConfiguration::bAnim)
-                    {
-                        for (auto& Build : Builds)
-                            if (Build && Build->bPlayerPlaced)
-                                Build->K2_DestroyActor();
-                    }
-                    else
-                    {
-                        for (auto& Build : Builds)
-                            if (Build && Build->bPlayerPlaced)
-                                Build->SilentDie(true);
-                    }
-
-                    Builds.Free();
-                    LastResetTime = CurrentTime;
-                }
-            }
+            
 
         }
+		
+
+		ImGui::Separator();
+		ImGui::Spacing();
+		ImGui::Text("NOTE: Some of these options may cause instability or crashes, use with caution!"); // just a warning for the users, not gonna lie, some of these options can be pretty sketchy if you dont know what you are doing, so a warning is always good to have
+
             break;
         case 4:
             static auto PlaylistClass = UFortPlaylistAthena::StaticClass();
