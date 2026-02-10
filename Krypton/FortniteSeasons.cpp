@@ -50,11 +50,11 @@ void ValidateSeasonAndVersion()
         }
 
         // =========================
-        // SEASON 2 (2.0 – 2.5)
+        // SEASON 2 (1.11 – 2.5)
         // =========================
         else if (VersionInfo.FortniteSeason == 2)
         {
-            if (VersionInfo.FortniteVersion < 2.0 ||
+            if (VersionInfo.FortniteVersion < 1.11 ||
                 VersionInfo.FortniteVersion > 2.5)
             {
                 ExitProcess(0);
@@ -67,7 +67,7 @@ void ValidateSeasonAndVersion()
         else if (VersionInfo.FortniteSeason == 3)
         {
             if (VersionInfo.FortniteVersion < 3.0 ||
-                VersionInfo.FortniteVersion > 3.5)
+                VersionInfo.FortniteVersion > 3.6)
             {
                 ExitProcess(0);
             }
@@ -85,3 +85,8 @@ void ValidateSeasonAndVersion()
         std::cout << "[GS] Allowed Season: " << VersionInfo.FortniteSeason << "\n";
     }
 }
+/*
+todo:
+* all season and version
+* stuff like this should be for webhooks and Allowed sesason
+*/
