@@ -71,13 +71,13 @@ void SetupPlaylist(AFortGameMode* GameMode, AFortGameStateAthena* GameState)
             {
                 Playlist->RespawnHeight.Curve.CurveTable = nullptr;
                 Playlist->RespawnHeight.Curve.RowName = FName();
-                Playlist->RespawnHeight.Value = FConfiguration::RespawnHightClient;
+                Playlist->RespawnHeight.Value = FConfiguration::RespawnHightGamemode;
             }
             if (Playlist->HasRespawnTime())
             {
                 Playlist->RespawnTime.Curve.CurveTable = nullptr;
                 Playlist->RespawnTime.Curve.RowName = FName();
-                Playlist->RespawnTime.Value = FConfiguration::RespawnTimeClient;
+                Playlist->RespawnTime.Value = FConfiguration::RespawnTimeGamemode;
             }
             Playlist->RespawnType = 1; // InfiniteRespawns
             if (Playlist->HasbForceRespawnLocationInsideOfVolume())
