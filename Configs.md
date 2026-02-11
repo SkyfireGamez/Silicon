@@ -13,17 +13,18 @@ This can also be changed in teh GUI on the `LateGame` tab IN-GAME / IN REAL TIME
 ---
 
 ***GUI Configs***\
-Dont really touch these untill its perfect!!\
+Dont really touch these untill its perfect!!
 
 **bUsePlaylistTab** - This Enbales the Expermental `Playlist` tab.\ 
 ALSO if you use so Comment out **static inline auto Playlist = L"";** at the top  so it works.
 
 **bAnim** - this is the STATE of reset builds animation (idc if u set to `false`) + this used by the reset build command and the button so just check before you chnage it
 
+<!--
 **bExploit** - Legal cheats lol (not even dont yet)\
 **bEAuth** - ALWAYS BE TRUE if exploits are on (auth systen to see the tab even if ur giving out the gs)\
 **bAuthed** - DO NOT chnage this noe metter what!!!\
-**( This will use ur radmin IP so those are in Erbium's dllmain.cpp AKA the whitelist)**
+**( This will use ur radmin IP so those are in Erbium's dllmain.cpp AKA the whitelist)** -->
 
 ---
 
