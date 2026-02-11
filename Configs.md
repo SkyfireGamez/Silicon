@@ -7,8 +7,9 @@ I kept ALL original Erbium config so here's what **I** added + i DID categorized
 ---
 
 ***LateGame***\
-**bLGV2** - A Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)\ 
+**bVersionized** - A Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)\ 
 This can also be changed in teh GUI on the `LateGame` tab IN-GAME / IN REAL TIME!\
+
 **RespawnHightClient = 10000;** - (Client.cpp Line: 173)\
 **RespawnTimeClient = 5;** - (Client.cpp Line: 179)\
 **RespawnHightGamemode = 10000**; - (FortGamemode.cpp Line: 74)\
