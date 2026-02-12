@@ -7,23 +7,32 @@ I kept ALL original Erbium config so here's what **I** added + i DID categorized
 ---
 
 ***LateGame***\
-**bLGV2** - A Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)\ 
-This can also be changed in teh GUI on the `LateGame` tab IN-GAME / IN REAL TIME!
+**bLateGameVersionized** - (V2) A Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)\ 
+This can also be changed in teh GUI on the `LateGame` tab IN-GAME / IN REAL TIME!\
+**bLateGameCustom** - not done yet but 1 loadout only and can be changed
+
+
+**RespawnHightClient = 10000;** - (Client.cpp Line: 173)\
+**RespawnTimeClient = 5;** - (Client.cpp Line: 179)\
+**RespawnHightGamemode = 10000**; - (FortGamemode.cpp Line: 74)\
+**RespawnTimeGamemode = 5;** -  (FortGamemode.cpp Line: 80)
+
 
 ---
 
 ***GUI Configs***\
-Dont really touch these untill its perfect!!\
+Dont really touch these untill its perfect!!
 
 **bUsePlaylistTab** - This Enbales the Expermental `Playlist` tab.\ 
 ALSO if you use so Comment out **static inline auto Playlist = L"";** at the top  so it works.
 
 **bAnim** - this is the STATE of reset builds animation (idc if u set to `false`) + this used by the reset build command and the button so just check before you chnage it
 
+<!--
 **bExploit** - Legal cheats lol (not even dont yet)\
 **bEAuth** - ALWAYS BE TRUE if exploits are on (auth systen to see the tab even if ur giving out the gs)\
 **bAuthed** - DO NOT chnage this noe metter what!!!\
-**( This will use ur radmin IP so those are in Erbium's dllmain.cpp AKA the whitelist)**
+**( This will use ur radmin IP so those are in Erbium's dllmain.cpp AKA the whitelist)** -->
 
 ---
 
