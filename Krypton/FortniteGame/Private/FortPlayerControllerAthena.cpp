@@ -2001,7 +2001,7 @@ cheat fortmme - Fix Mantle
 			try { Health = std::stof(std::string(args[1])); }
 			catch (...) {}
 
-			Pawn->SetHealth(Health);
+			Pawn->SetMaxHealth(Health);
 			PlayerController->ClientMessage(FString(L"Set pawn health!"), FName(), 1.f);
 		}
 		else if (command == "setshield" || command == "shield")
