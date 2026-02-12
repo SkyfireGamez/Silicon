@@ -91,7 +91,6 @@ struct FConfiguration
 };
 
 
-/// Very expermental
 
 // Playlist selectorV2 |  used for GUI plz enable "bUsePlaylistTab" to use it!!
 struct FPlaylist
