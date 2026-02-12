@@ -24,7 +24,7 @@
 								(  changed by @Ducki67 on github  )
 
 ======================================================================================
-"V1" Late Game lootpool (Old, non-versionized) [Default Erbium Late Game lootpool]
+"V1" Late Game lootpool (Old, non-versionized) [Default Silicon Late Game lootpool]
 
 "V2" Late Game lootpool (Versionized) 
 [ Add this bool to Configuration,h as: "static inline auto bLateGameVersionized = true"  ]

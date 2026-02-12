@@ -64,7 +64,7 @@ struct FConfiguration
     static inline constexpr auto WebhookURL = ""; // fill in if you want status to send to a webhook
 
     static inline auto PlotDefinition = L"/Game/Playgrounds/Items/Plots/TheBlock_Season7"; // put any map / plot here (e.g. "/Game/Playgrounds/Items/Plots/TheBlock_Season7" The Block from S7)
-    static inline auto bMagicMethodCreative = true;  // magic cool fantastic ud creaative method Erbium 2025 -miko
+    static inline auto bMagicMethodCreative = true;  // magic cool fantastic ud creaative method Silicon 2025 -miko
 
 
 	/// DONT CHANGE THESE SHITS | Some stuff are GUI related so be careful when changing them

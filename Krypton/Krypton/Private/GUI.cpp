@@ -829,7 +829,7 @@ void GUI::Init()
                 {
                     ImGui::TextColored(
                         ImVec4(0.7f, 0.3f, 1.0f, 1.0f),
-                        "Krypton log:"
+                        "Silicon log:"
                     );
                     ImGui::SameLine();
                 }
