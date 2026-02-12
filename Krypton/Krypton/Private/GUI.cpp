@@ -602,10 +602,13 @@ void GUI::Init()
             ImGui::Text("MISC OPTIONS:");
 			ImGui::BeginChild("ServerSettings", ImVec2(0, 400), true, ImGuiWindowFlags_AlwaysVerticalScrollbar);
 
+            ImGui::Separator();
+			ImGui::Spacing();
 			ImGui::Text("Server Settings:");
             ImGui::SliderInt("Tick Rate:", &FConfiguration::MaxTickRate, 30, 120);
             ImGui::Checkbox("Allow CheatManager Clients", &FConfiguration::bEnableCheats);
 
+			ImGui::Separator();
 			ImGui::Spacing();
             ImGui::Text("Game Rules:");
             ImGui::Checkbox("Infinite Materials", &FConfiguration::bInfiniteMats);
@@ -625,6 +628,10 @@ void GUI::Init()
                 ImGui::SliderInt("RespawnTimeGamemode (GS dlls) \n(FortGamemode.cpp Line: 80)", &FConfiguration::RespawnTimeGamemode, 3, 25);
 
 			}
+            ImGui::Separator();
+			ImGui::Spacing();
+			ImGui::Text("Other: (maybe later)");
+
             ImGui::EndChild();
 
             ImGui::Checkbox("Reset Builds Anim (Dont use thise for now skidda)", &FConfiguration::bAnim);
@@ -662,7 +669,11 @@ void GUI::Init()
 
 		ImGui::Separator();
 		ImGui::Spacing();
-		ImGui::Text("NOTE: Some of these options may cause instability or crashes, use with caution!"); // just a warning for the users, not gonna lie, some of these options can be pretty sketchy if you dont know what you are doing, so a warning is always good to have
+		ImGui::Text("NOTE: Some of these options may cause instability or crashes, use with caution!");// just a warning for the users, not gonna lie, some of these options can be pretty sketchy if you dont know what you are doing, so a warning is always good to have
+
+       
+
+
 
             break;
         case 4:
@@ -870,10 +881,10 @@ void GUI::Init()
 
          case 9:
          {
-             if (VersionInfo.FortniteVersion < 1.2  || VersionInfo.FortniteVersion > 2.5)
-             {
+             /*if (VersionInfo.FortniteVersion < 1.2 || VersionInfo.FortniteVersion > 2.5)
+             {*/
                  ImGui::Checkbox("Versionized Lootpool", &FConfiguration::bLateGameVersionized);
-			 }
+			 //}
              // Customer 7000 | U7K
              ImGui::Checkbox("Custom Late Game loadout  (Not fully done yet!!!)", &FConfiguration::bLateGameCustom);
              if (FConfiguration::bLateGameCustom)
