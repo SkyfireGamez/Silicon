@@ -31,8 +31,8 @@ struct FConfiguration
     static inline auto bClientConsole67K = false; // not added yet
 
 
-    static inline auto bLateGame = false;
-    static inline auto bLateGameVersionized = false; // (V2)  a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
+    static inline auto bLateGame = true;
+    static inline auto bLateGameVersionized = true; // (V2)  a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
     static inline auto bLateGameCustom = false; // Custom LG loadout maker and settings for gui (BETA)
     static inline auto LateGameZone = 4; // starting zone
     static inline auto bLateGameLongZone = false; // zone doesnt close for a long time
@@ -64,7 +64,7 @@ struct FConfiguration
     static inline constexpr auto WebhookURL = ""; // fill in if you want status to send to a webhook
 
     static inline auto PlotDefinition = L"/Game/Playgrounds/Items/Plots/TheBlock_Season7"; // put any map / plot here (e.g. "/Game/Playgrounds/Items/Plots/TheBlock_Season7" The Block from S7)
-    static inline auto bMagicMethodCreative = true;  // magic cool fantastic ud creaative method Erbium 2025 -miko
+    static inline auto bMagicMethodCreative = false;  // magic cool fantastic ud creaative method Erbium 2025 -miko
 
 
 	/// DONT CHANGE THESE SHITS | Some stuff are GUI related so be careful when changing them
