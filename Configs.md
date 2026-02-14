@@ -1,4 +1,4 @@
-# Configs (Krypton)
+# Configs (Silicon/Krypton)
 Here's everything what to know about configuring this GS / about some configs
 
 ## General stuff
@@ -7,8 +7,8 @@ I kept ALL original Erbium config so here's what **I** added + i DID categorized
 ---
 
 ***LateGame***\
-**bLateGameVersionized** - (V2) A Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)\ 
-This can also be changed in teh GUI on the `LateGame` tab IN-GAME / IN REAL TIME!\
+**bLateGameVersionized** - (V2) A Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 3.2!!)\ 
+This can also be changed in the GUI on the `LateGame` tab IN-GAME / IN REAL TIME!\
 **bLateGameCustom** - not done yet but 1 loadout only and can be changed
 
 
@@ -178,6 +178,5 @@ more ig soon but there will be other shit to list
 ---
 
 # Configs (CraniumV5)
-later ig
-
+- You can change the port inside Client.cpp (only use this if your not on reboot launcher)
 
