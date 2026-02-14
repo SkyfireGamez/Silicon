@@ -17,7 +17,7 @@ struct FConfiguration
 
 
 
-    static inline auto MaxTickRate = 120; // 120 is pretty good because it's smooth and optimized, it works good on low/high end too
+    static inline auto MaxTickRate = 30;
 
     
     ///  dont juse this untill its done its like s shit from reboot but in my way
@@ -31,8 +31,8 @@ struct FConfiguration
     static inline auto bClientConsole67K = false; // not added yet
 
 
-    static inline auto bLateGame = false;
-    static inline auto bLateGameVersionized = false; // (V2)  a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
+    static inline auto bLateGame = true;
+    static inline auto bLateGameVersionized = true; // (V2)  a Loot controller between the OLD and NEW "versionized" Late Game (DONT TURN THIS OFF if ur runing version below 4.5!!)
     static inline auto bLateGameCustom = false; // Custom LG loadout maker and settings for gui (BETA)
     static inline auto LateGameZone = 4; // starting zone
     static inline auto bLateGameLongZone = false; // zone doesnt close for a long time
@@ -41,11 +41,11 @@ struct FConfiguration
     // game rules (mainly for LG)
     static inline auto bInfiniteMats = true;
     static inline auto bInfiniteAmmo = true;
-    static inline auto bForceRespawns = false; // build your client with this too!
+    static inline auto bForceRespawns = true; // build your client with this too!
     static inline int RespawnHightClient = 10000; // respawn hight value (Client.cpp Line: 173)
-    static inline int RespawnTimeClient = 3; // respawnt time for clients as value (Client.cpp Line: 179)
+    static inline int RespawnTimeClient = 5; // respawnt time for clients as value (Client.cpp Line: 179)
     static inline int RespawnHightGamemode = 10000; // (FortGamemode.cpp Line: 74)
-    static inline int RespawnTimeGamemode = 3;// (FortGamemode.cpp Line: 80)
+    static inline int RespawnTimeGamemode = 5;// (FortGamemode.cpp Line: 80)
     static inline auto bJoinInProgress = false;
     static inline auto bKeepInventory = false;
 
@@ -61,10 +61,10 @@ struct FConfiguration
     static inline constexpr auto bGUI = true;
     static inline constexpr auto bCustomCrashReporter = true;
     static inline constexpr auto bUseStdoutLog = false;
-    static inline constexpr auto WebhookURL = "https://discord.com/api/webhooks/1444060862133436548/KCwQu47_Gsodq5V3BbwkHh3NqtWiYOERt4wakgGMey_1-AYvSDimmLdKRgxu2qtyPtes"; // fill in if you want status to send to a webhook
+    static inline constexpr auto WebhookURL = ""; // fill in if you want status to send to a webhook
 
     static inline auto PlotDefinition = L"/Game/Playgrounds/Items/Plots/TheBlock_Season7"; // put any map / plot here (e.g. "/Game/Playgrounds/Items/Plots/TheBlock_Season7" The Block from S7)
-    static inline auto bMagicMethodCreative = true;  // magic cool fantastic ud creaative method Silicon 2025 -miko
+    static inline auto bMagicMethodCreative = false;  // magic cool fantastic ud creaative method Erbium 2025 -miko
 
 
 	/// DONT CHANGE THESE SHITS | Some stuff are GUI related so be careful when changing them
@@ -79,8 +79,21 @@ struct FConfiguration
     static inline wchar_t CustomSniperItem[500] = L"/Game/Athena/Items/Weapons/WID_Sniper_Heavy_Athena_SR_Ore_T03.WID_Sniper_Heavy_Athena_SR_Ore_T03";
     static inline wchar_t CustomUtilItem[500] = L"/Game/Athena/Items/Consumables/ShockwaveGrenade/Athena_ShockGrenade.Athena_ShockGrenade";
     static inline int CustomUtilItemCount = 1;
+    /*static inline wchar_t CustomSpecialAmmo1[500] = L""; // maybe il do it later
+    static inline int CustomAmmoCount1 = 1;
+    static inline wchar_t CustomSpecialAmmo2[500] = L"";
+    static inline int CustomAmmoCount2 = 1;
+    static inline wchar_t CustomSpecialAmmo3[500] = L"";
+    static inline int CustomAmmoCount3 = 1;*/
 
 
+    /// == EXPLOITS TAB ==
+    /*
+    This will use ur radmin IP so those are in Erbium's dllmain.cpp AKA the whitelist
+    */
+    //static inline bool bExploit = false; // Legal cheats lol |  Nocom lol
+    //static inline bool bEAuth = false; // ALWAYS BE TRUE if exploits are on
+    //static inline bool bAuthed = false;  // Final auth result | DONT TOUCH THIS
     
     // currentlz not finished  yet BUT tested on 1.11 it should work ig
     static inline auto bUseCustomShit = false; // DONT ENABLE THIS SHIT IF U DONT KNOW WHAT YOU ARE DOING!!!! (ALSO Check FortGameMode.cpp before yout use this!!)
@@ -91,6 +104,14 @@ struct FConfiguration
 };
 
 
+/// this is just incase if i wanna move the fortniteSeason.cpp to here the whole func to be configured yk
+///  BUT porb not cuz i would just add ALL versions of the game
+/// 
+/*struct AllowedSeason
+{
+};*/
+
+/// Very expermental
 
 // Playlist selectorV2 |  used for GUI plz enable "bUsePlaylistTab" to use it!!
 struct FPlaylist
