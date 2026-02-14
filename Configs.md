@@ -178,5 +178,6 @@ more ig soon but there will be other shit to list
 ---
 
 # Configs (CraniumV5)
-- You can change the port inside Client.cpp (only use this if your not on reboot launcher)
+later ig
+
 
