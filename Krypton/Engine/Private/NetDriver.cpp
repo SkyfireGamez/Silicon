@@ -538,7 +538,7 @@ void UNetDriver::TickFlush(UNetDriver* Driver, float DeltaSeconds)
 					sprintf_s(version, VersionInfo.FortniteVersion >= 5.00 || VersionInfo.FortniteVersion < 1.2 ? "%.2f" : "%.1f", VersionInfo.FortniteVersion);
 
 					auto Playlist = VersionInfo.FortniteVersion >= 3.5 && GameMode->HasWarmupRequiredPlayerCount() ? (GameMode->GameState->HasCurrentPlaylistInfo() ? GameMode->GameState->CurrentPlaylistInfo.BasePlaylist : GameMode->GameState->CurrentPlaylistData) : nullptr;
-					auto payload = UEAllocatedString("{\"embeds\": [{\"title\": \"Match has ended!\", \"fields\": [{\"name\":\"Version\",\"value\":\"") + version + "\"}, {\"name\":\"Playlist\",\"value\":\"" + (Playlist ? Playlist->PlaylistName.ToString() : "Playlist_DefaultSolo") + "\"}], \"color\": " + "\"7237230\", \"footer\": {\"text\":\"Krypton\", \"icon_url\":\"https://static.vecteezy.com/system/resources/previews/012/150/197/non_2x/krypton-symbol-chemical-element-of-the-periodic-table-illustration-vector.jpg\"}, \"timestamp\":\"" + iso8601() + "\"}] }";
+					auto payload = UEAllocatedString("{\"embeds\": [{\"title\": \"Match has ended!\", \"fields\": [{\"name\":\"Version\",\"value\":\"") + version + "\"}, {\"name\":\"Playlist\",\"value\":\"" + (Playlist ? Playlist->PlaylistName.ToString() : "Playlist_DefaultSolo") + "\"}], \"color\": " + "\"7237230\", \"footer\": {\"text\":\"Silicon\", \"icon_url\":\"https://raw.githubusercontent.com/SkyfireGamez/Silicon/refs/heads/main/Silicon.png\"}, \"timestamp\":\"" + iso8601() + "\"}] }";
 
 					curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload.c_str());
 
@@ -622,7 +622,7 @@ void UNetDriver::TickFlush__RepGraph(UNetDriver* Driver, float DeltaSeconds)
 						sprintf_s(version, VersionInfo.FortniteVersion >= 5.00 || VersionInfo.FortniteVersion < 1.2 ? "%.2f" : "%.1f", VersionInfo.FortniteVersion);
 						// P2
         				auto Playlist = VersionInfo.FortniteVersion >= 3.5 && GameMode->HasWarmupRequiredPlayerCount() ? (GameMode->GameState->HasCurrentPlaylistInfo() ? GameMode->GameState->CurrentPlaylistInfo.BasePlaylist : GameMode->GameState->CurrentPlaylistData) : nullptr;
-						auto payload = UEAllocatedString("{\"embeds\": [{\"title\": \"Match has ended!\", \"fields\": [{\"name\":\"Version\",\"value\":\"") + version + "\"}, {\"name\":\"Playlist\",\"value\":\"" + (Playlist ? Playlist->PlaylistName.ToString() : "Playlist_DefaultSolo") + "\"}], \"color\": " + "\"7237230\", \"footer\": {\"text\":\"Krypton\", \"icon_url\":\"https://static.vecteezy.com/system/resources/previews/012/150/197/non_2x/krypton-symbol-chemical-element-of-the-periodic-table-illustration-vector.jpg\"}, \"timestamp\":\"" + iso8601() + "\"}] }";
+						auto payload = UEAllocatedString("{\"embeds\": [{\"title\": \"Match has ended!\", \"fields\": [{\"name\":\"Version\",\"value\":\"") + version + "\"}, {\"name\":\"Playlist\",\"value\":\"" + (Playlist ? Playlist->PlaylistName.ToString() : "Playlist_DefaultSolo") + "\"}], \"color\": " + "\"7237230\", \"footer\": {\"text\":\"Silicon\", \"icon_url\":\"https://raw.githubusercontent.com/SkyfireGamez/Silicon/refs/heads/main/Silicon.png\"}, \"timestamp\":\"" + iso8601() + "\"}] }";
 
 						curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload.c_str());
 
@@ -760,7 +760,7 @@ void UNetDriver::TickFlush__Iris(UNetDriver* Driver, float DeltaSeconds)
 
 					// P1
         			auto Playlist = VersionInfo.FortniteVersion >= 3.5 && GameMode->HasWarmupRequiredPlayerCount() ? (GameMode->GameState->HasCurrentPlaylistInfo() ? GameMode->GameState->CurrentPlaylistInfo.BasePlaylist : GameMode->GameState->CurrentPlaylistData) : nullptr;
-					auto payload = UEAllocatedString("{\"embeds\": [{\"title\": \"Match has ended!\", \"fields\": [{\"name\":\"Version\",\"value\":\"") + version + "\"}, {\"name\":\"Playlist\",\"value\":\"" + (Playlist ? Playlist->PlaylistName.ToString() : "Playlist_DefaultSolo") + "\"}], \"color\": " + "\"7237230\", \"footer\": {\"text\":\"Krypton\", \"icon_url\":\"https://static.vecteezy.com/system/resources/previews/012/150/197/non_2x/krypton-symbol-chemical-element-of-the-periodic-table-illustration-vector.jpg\"}, \"timestamp\":\"" + iso8601() + "\"}] }";
+					auto payload = UEAllocatedString("{\"embeds\": [{\"title\": \"Match has ended!\", \"fields\": [{\"name\":\"Version\",\"value\":\"") + version + "\"}, {\"name\":\"Playlist\",\"value\":\"" + (Playlist ? Playlist->PlaylistName.ToString() : "Playlist_DefaultSolo") + "\"}], \"color\": " + "\"7237230\", \"footer\": {\"text\":\"Silicon\", \"icon_url\":\"https://raw.githubusercontent.com/SkyfireGamez/Silicon/refs/heads/main/Silicon.png\"}, \"timestamp\":\"" + iso8601() + "\"}] }";
 
 					curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload.c_str());
 

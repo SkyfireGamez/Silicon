@@ -187,7 +187,7 @@ void Main()
     if constexpr (FConfiguration::WebhookURL && *FConfiguration::WebhookURL)
         curl_global_init(CURL_GLOBAL_ALL);
 
-    sprintf_s(GUI::windowTitle, VersionInfo.EngineVersion >= 5.0 ? "Krypton (FN %.2f, UE %.1f): Setting up" : (VersionInfo.FortniteVersion >= 5.00 || VersionInfo.FortniteVersion < 1.2 ? "Krypton (FN %.2f, UE %.2f): Setting up" : "Krypton (FN %.1f, UE %.2f): Setting up"), VersionInfo.FortniteVersion, VersionInfo.EngineVersion);
+    sprintf_s(GUI::windowTitle, VersionInfo.EngineVersion >= 5.0 ? "Silicon (FN %.2f, UE %.1f): Setting up" : (VersionInfo.FortniteVersion >= 5.00 || VersionInfo.FortniteVersion < 1.2 ? "Silicon (FN %.2f, UE %.2f): Setting up" : "Silicon (FN %.1f, UE %.2f): Setting up"), VersionInfo.FortniteVersion, VersionInfo.EngineVersion);
     SetConsoleTitleA(GUI::windowTitle);
 
 
