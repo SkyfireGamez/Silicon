@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "../SDK/Offsets.h"
-
-#include "Krypton/Public/Configuration.h"
+#include "../Krypton/Krypton/Public/Configuration.h"
 
 #include <Windows.h>
 #include <iostream>

@@ -41,7 +41,7 @@ struct FConfiguration
     // game rules (mainly for LG)
     static inline auto bInfiniteMats = true;
     static inline auto bInfiniteAmmo = true;
-    static inline auto bForceRespawns = true; // build your client with this too!
+    static inline auto bForceRespawns = false; // build your client with this too!
     static inline int RespawnHightClient = 10000; // respawn hight value (Client.cpp Line: 173)
     static inline int RespawnTimeClient = 3; // respawnt time for clients as value (Client.cpp Line: 179)
     static inline int RespawnHightGamemode = 10000; // (FortGamemode.cpp Line: 74)
@@ -61,7 +61,7 @@ struct FConfiguration
     static inline constexpr auto bGUI = true;
     static inline constexpr auto bCustomCrashReporter = true;
     static inline constexpr auto bUseStdoutLog = false;
-    static inline constexpr auto WebhookURL = ""; // fill in if you want status to send to a webhook
+    static inline constexpr auto WebhookURL = "https://discord.com/api/webhooks/1444060862133436548/KCwQu47_Gsodq5V3BbwkHh3NqtWiYOERt4wakgGMey_1-AYvSDimmLdKRgxu2qtyPtes"; // fill in if you want status to send to a webhook
 
     static inline auto PlotDefinition = L"/Game/Playgrounds/Items/Plots/TheBlock_Season7"; // put any map / plot here (e.g. "/Game/Playgrounds/Items/Plots/TheBlock_Season7" The Block from S7)
     static inline auto bMagicMethodCreative = true;  // magic cool fantastic ud creaative method Silicon 2025 -miko
