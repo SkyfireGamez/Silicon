@@ -1,14 +1,15 @@
-# Krypton
-A fork of erbium with Ducki67's adjustments and features
+# Silicon
+A fork of Krypton with Skyfire's commands and features.
 
-About the configs just go [here](https://github.com/Ducki67/Krypton/blob/main/Configs.md)
+About the configs just go [here](https://github.com/SkyfireGamez/Silicon/blob/main/Configs.md)
 
 
 ## What is different?
-- Commands (not so much)
-- Gui changes (a lil better + more useful tabs)
-- LateGame  (Versionized Lootpool + old one too)
-- Better and more conifgs
+- More Commands
+- Fixed Late Game bug
+- Fixed battle bus skins
+- Item drop/physics
+- other stuff ig
 
 ---
 
@@ -18,6 +19,4 @@ About the configs just go [here](https://github.com/Ducki67/Krypton/blob/main/Co
 - V2 Late game lootpool
 - gui stuff (dev tab, lategame tab, expermental playlist tab,)
 - dump playlist and items as commands
-
-**Client:**
-  - useful hotkeys and logging stuff (later)
+- short commands for the lazy mfs
